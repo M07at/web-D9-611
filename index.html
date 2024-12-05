@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D9 611</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    footer {
+        height: 80px;
+        background-color: #343a41;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+    footer p{
+        color: rgba(255, 255, 255, 0.838);
+        font-size: 18px;
+    }
+
+    .header a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 25px;
+        border: 5px   dotted #909bd9bd;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+    .header a:hover{
+        text-decoration: underline;
+        text-decoration-color: rgb(255, 255, 255);
+    }
+    .report{
+        background-color: rgb(158, 189, 192);
+        width: 100vw;
+        height: 75vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        position: relative;
+        list-style: none;
+        width: 300px;
+        height:432px;
+        transform-style: preserve-3d;
+        perspective: 700px;
+        margin-left:20vw;
+        margin-top: 4vw;
+    }
+    .rpo{
+        display: flex;
+    }
+
+    li{
+        position: absolute;
+    }
+    li:nth-child(16){
+        transform:rotateY(-45deg);
+        transform-origin: left;
+        transition: 1.9s;
+    }
+    li:nth-child(15){
+        transform:rotateY(-43deg);
+        transform-origin: left;
+        transition: 1.8s;
+    }
+    li:nth-child(14){
+        transform:rotateY(-41deg);
+        transform-origin: left;
+        transition: 1.7s;
+    }
+    li:nth-child(13){
+        transform:rotateY(-39deg);
+        transform-origin: left;
+        transition: 1.6s;
+    }
+    li:nth-child(12){
+        transform:rotateY(-37deg);
+        transform-origin: left;
+        transition: 1.5s;
+    }
+    li:nth-child(11){
+        transform:rotateY(-35deg);
+        transform-origin: left;
+        transition: 1.4s;
+    }
+    li:nth-child(10){
+        transform:rotateY(-33deg);
+        transform-origin: left;
+        transition: 1.3s;
+    }
+    li:nth-child(9){
+        transform:rotateY(-31deg);
+        transform-origin: left;
+        transition: 1.2s;
+    }
+    li:nth-child(8){
+        transform:rotateY(-29deg);
+        transform-origin: left;
+        transition: 1.1s;
+    }
+    li:nth-child(7){
+        transform:rotateY(-27deg);
+        transform-origin: left;
+        transition: 1.0s;
+    }
+    li:nth-child(6){
+        transform:rotateY(-25deg);
+        transform-origin: left;
+        transition: 0.9s;
+    }
+    li:nth-child(5){
+        transform:rotateY(-23deg);
+        transform-origin: left;
+        transition: 0.8s;
+    }
+    li:nth-child(4){
+        transform:rotateY(-21deg);
+        transform-origin: left;
+        transition: 0.7s;
+    }
+    li:nth-child(3){
+        transform:rotateY(-19deg);
+        transform-origin: left;
+        transition: 0.6s;
+    }
+    li:nth-child(2){
+        transform:rotateY(-17deg);
+        transform-origin: left;
+        transition: 0.5s;
+    }
+    li:nth-child(1){
+        transform:rotateY(-15deg);
+        transform-origin: left;
+    }
+    ul:hover li:nth-child(16){
+        transform: rotateY(-180deg);
+        transition: 1.2s;
+    }
+    ul:hover li:nth-child(15){
+        transform: rotateY(-180deg);
+        transition: 1.6s;
+    }
+    ul:hover li:nth-child(14){
+        transform: rotateY(-180deg);
+        transition: 2.0s;
+    }
+    ul:hover li:nth-child(13){
+        transform: rotateY(-180deg);
+        transition: 2.4s;
+    }
+    ul:hover li:nth-child(12){
+        transform: rotateY(-180deg);
+        transition: 2.8s;
+    }
+    ul:hover li:nth-child(11){
+        transform: rotateY(-180deg);
+        transition: 3.2s;
+    }
+    ul:hover li:nth-child(10){
+        transform: rotateY(-180deg);
+        transition: 3.6s;
+    }
+    ul:hover li:nth-child(9){
+        transform: rotateY(-180deg);
+        transition: 4.0s;
+    }
+    ul:hover li:nth-child(8){
+        transform: rotateY(-180deg);
+        transition: 4.4s;
+    }
+    ul:hover li:nth-child(7){
+        transform: rotateY(-180deg);
+        transition: 4.8s;
+    }
+    ul:hover li:nth-child(6){
+        transform: rotateY(-180deg);
+        transition: 5.2s;
+    }
+    ul:hover li:nth-child(5){
+        transform: rotateY(-180deg);
+        transition: 5.6s;
+    }
+    ul:hover li:nth-child(4){
+        transform: rotateY(-180deg);
+        transition: 6.0s;
+    }
+    ul:hover li:nth-child(3){
+        transform: rotateY(-180deg);
+        transition: 6.4s;
+    }
+    ul:hover li:nth-child(2){
+        transform: rotateY(-180deg);
+        transition: 6.8s;
+    }
+    img{
+        width: 250px;
+        height: 360px;
+        box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
+    }
+    .header{
+        background-color: bisque;
+        color:  #92b8e1;
+        height: 80vh;
+        background-image: url(images/b3.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header h1{
+        font-size: 120px;
+    }
+    .header h2{
+        font-size: 35px;
+        color: white;
+        margin: 25px 0;
+    }
+    .header h3{
+        font-size: 25px;
+        color: rgb(208, 235, 255);
+        padding: 15px;
+        border:5px #92b8e1 solid;
+    }
+    .ex{
+        display: inline;
+    }
+    .ex p{
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        color: #ffffff;
+    }
+
+
+    
+
+    
+</style>
+
+
+<body>
+<div class="header">
+    <h1><strong>D9 611</strong></h1>
+    <h2>王祺，郭芳源，刘雨桐，冯建彤</h2>
+    <h3>请点击下方实验报告跳转至个人网页</h3>
+    <a href=""><p>返回班级主页</p></a>
+</div>
+<div class="report">
+<div class="rep">
+
+    <div class="ex">
+        <p><strong>王祺</strong><p>
+        <p>U202414856</p>
+    <ul>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3166.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3165.JPG"></a></li>    
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3164.JPG"></a></li>   
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3163.JPG"></a></li>        
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3162.JPG"></a></li>        
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3161.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3160.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3159.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3158.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3157.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3156.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3155.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3154.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/IMG_3153.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/2.JPG"></a></li>
+        <li><a href="wq856/index.html"><img src="images/wqq/1.JPG"></a></li>
+    </ul>
+    </div>
+    <div class="ex">
+        <p><strong>刘雨桐</strong></p>
+        <p>U202414848</p>
+    <ul>
+        
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3180.JPG"></a></li>
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3179.JPG"></a></li>    
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3178.JPG"></a></li>   
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3177.JPG"></a></li> 
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3176.JPG"></a></li>   
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3175.JPG"></a></li>   
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3174.JPG"></a></li> 
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3173.JPG"></a></li>        
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3172.JPG"></a></li>             
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3171.JPG"></a></li> 
+        <li><a href="lyt848/index.html"><img src="images/lytt/IMG_3170.JPG"></a></li>   
+    </ul>
+    </div>
+</div>
+<div class="rep">
+    <div class="ex">
+        <p><strong>郭芳源</strong></p>
+        <p>U202414840</p>
+    <ul>
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3259.JPG"></a></li>           
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3258.JPG"></a></li>           
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3257.JPG"></a></li>    
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3256.JPG"></a></li>   
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3255.JPG"></a></li>
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3254.JPG"></a></li>    
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3253.JPG"></a></li>   
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3252.JPG"></a></li>
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3251.JPG"></a></li>    
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3250.JPG"></a></li>  
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3249.JPG"></a></li>
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3248.JPG"></a></li>    
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3247.JPG"></a></li>         
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3246.JPG"></a></li>          
+        <li><a href="gfy840/index.html"><img src="images/gfyy/IMG_3245.JPG"></a></li>         
+ 
+    </ul>
+    </div>
+    <div class="ex">
+        <p><strong>冯建彤</strong></p>
+        <p>U202490045</p>
+   
+    <ul>
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3217.JPG"></a></li>
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3216.JPG"></a></li>    
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3215.JPG"></a></li>   
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3214.JPG"></a></li>        
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3213.JPG"></a></li>        
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3212.JPG"></a></li>
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3211.JPG"></a></li>
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3210.JPG"></a></li>
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3209.JPG"></a></li>
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3208.JPG"></a></li>
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3207.JPG"></a></li>
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3206.JPG"></a></li>
+        <li><a href="fjt045/index.html"><img src="images/fjtt/IMG_3205.JPG"></a></li>
+    </ul>
+    </div>
+</div>
+</div>
+
+<footer>
+    <p>————D9 611————</p>
+</footer>
+</body>
+</html>
